@@ -1,0 +1,49 @@
+{
+  "name": "mcp-audit",
+  "version": "0.1.0",
+  "description": "Scan the MCP servers installed in your AI tools for tool-poisoning, prompt injection, leaked secrets, over-broad permissions, and silent rug-pull changes — in one command.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "scanner",
+    "prompt-injection",
+    "tool-poisoning",
+    "ai-security",
+    "claude",
+    "cursor",
+    "supply-chain"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-audit": "dist/index.js",
+    "mcpaudit": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepare": "tsup",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
